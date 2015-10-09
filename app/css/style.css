@@ -1,0 +1,53 @@
+html {
+	font-family: sans-serif;
+	box-sizing: border-box;
+	background-color: #D24940;
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+	text-align: center;
+	margin: 0;
+}
+
+.container {
+	text-align: center;
+}
+
+h1 {
+	color: #fff;
+	font-size: 2.5rem;
+	border-bottom: 5px solid #fff;
+	padding: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+}
+
+textarea:focus, input:focus, button:focus {
+    outline: 0;
+}
+
+.button {
+	padding: 1rem;
+	background-color: #DE3B30;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	margin: 0rem auto 1rem auto;
+}
+
+.button:hover {
+	opacity: 0.9;
+}
+
+.countries-content,
+.country-content,
+.home-content {
+	background-color: #fff;
+	padding: 1rem;
+	margin: 2rem;
+}
+
