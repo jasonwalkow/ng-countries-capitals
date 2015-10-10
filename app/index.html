@@ -9,12 +9,12 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body ng-class="{loading: isLoading}">
 	<header class="nav-top">
 		<h1>+ Countries and Capitals +</h1>
 	</header>
 	<br>
-	<div class="content">
+	<div class="content animate-view-container animate-view animate-out">
 		<div ng-view></div>
 	</div>	
 </body>

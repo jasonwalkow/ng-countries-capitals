@@ -162,3 +162,42 @@ span {
 	opacity: 0.9;
 }
 
+.loading {
+  	position: absolute;
+  	height: 100%;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+}
+.loading:before {
+  	position: absolute;
+  	content: "";
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	top: 0;
+  	z-index: 1000;
+  	background: rgba(255,255,255,0.7) no-repeat center center;
+  	background-image: url('../9.gif');
+  	background-size: 80px;
+}
+
+.animate-view-container { 
+	position: relative; 
+	min-height: 100%; 
+}
+
+.animate-view.ng-enter {
+    transition:1.5s linear all;
+}
+
+.animate-view.ng-enter { 
+	opacity:0; 
+	z-index:100; 
+}
+.animate-view.ng-enter.ng-enter-active { 
+	opacity: 1;
+}
+
+

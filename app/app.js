@@ -44,7 +44,7 @@ angular.module('countCapApp', ['ngRoute', 'ngAnimate', 'countCapLibrary'])
 		function($rootScope, $timeout){	
 	  		$timeout(function() {
 				$rootScope.isLoading = false;
-		}, 1000);
+		}, 2000);
 	}])
 	.controller('CountriesCtrl', ['$scope', '$rootScope', '$location', 'countries', 
 		function($scope, $rootScope, $location, countries){	
