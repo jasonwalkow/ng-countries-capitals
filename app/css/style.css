@@ -178,8 +178,8 @@ span {
   	right: 0;
   	top: 0;
   	z-index: 1000;
-  	background: rgba(255,255,255,0.7) no-repeat center center;
-  	background-image: url('../9.gif');
+  	background: rgba(255,255,255,0.90) no-repeat center center;
+  	background-image: url('../9.GIF');
   	background-size: 80px;
 }
 
