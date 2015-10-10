@@ -1,7 +1,8 @@
 <div class="countries-content">
-	<table>
+	<h2 class="countries-title">Click on a country to learn more!</h2>
+	<table class="ng-scope">
 		<thead>
-			<tr class="header-row">
+			<tr class="header-row" >
 				<th>Name</th>
 				<th>Country Code</th>
 				<th>Capital</th>
@@ -11,15 +12,15 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="country-row" ng-repeat="country in countries">
-				<td><a ng-href="#/countries/{{country.code}}/{{country.capital}}">{{country.name}}</a></td>
-				<td>{{country.code}}</td>
-				<td>{{country.capital}}</td>
-				<td>{{country.area | number}}</td>
-				<td>{{country.population | number}}</td>
-				<td>{{country.continent}}</td>
+			<tr class="country-row" ng-repeat="c in countries">
+				<td><a ng-click="changeLocation(c.countryCode)" class="country-name">{{c.countryName}}</a></td>
+				<td>{{c.countryCode}}</td>
+				<td>{{c.capital}}</td>
+				<td>{{c.areaInSqKm | number}}</td>
+				<td>{{c.population | number}}</td>
+				<td>{{c.continent}}</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
-<a class="button" href="/#/">Home</a>
+<a class="button" href="#/">Home</a>

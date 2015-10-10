@@ -1,26 +1,44 @@
 html {
 	font-family: sans-serif;
-	box-sizing: border-box;
 	background-color: #D24940;
 }
 
 body {
 	font-family: 'Karla', sans-serif;
 	text-align: center;
-	margin: 0;
+	background-color: #D24940;
 }
 
-.container {
+a {
+	cursor: pointer;
+	color: #D24940;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fff;
+	opacity: 0.9;
+}
+
+.content {
 	text-align: center;
 }
 
 h1 {
 	color: #fff;
-	font-size: 2.5rem;
+	font-size: 4rem;
 	border-bottom: 5px solid #fff;
 	padding: 1rem;
 	text-transform: uppercase;
 	letter-spacing: 0.15rem;
+	margin-bottom: 2rem;
+	display: block;
+}
+
+.home-intro {
+	font-size: 1.5rem;
+	margin: 1rem;
+	padding: 1rem;
 }
 
 textarea:focus, input:focus, button:focus {
@@ -36,18 +54,107 @@ textarea:focus, input:focus, button:focus {
 	font-weight: bold;
 	color: #fff;
 	cursor: pointer;
-	margin: 0rem auto 1rem auto;
+	margin: 2rem auto 2rem auto;
 }
 
 .button:hover {
+	color: #fff;
 	opacity: 0.9;
 }
 
 .countries-content,
 .country-content,
-.home-content {
+.home-content,
+.content {
 	background-color: #fff;
 	padding: 1rem;
+	margin: 1rem 20%;
+	border-radius: 3px;
+}
+
+.countries-content,
+.home-content {
+	margin: 1rem;
+}
+
+table {
+	padding: 0.5rem;
+	margin: 2rem auto 1rem auto;
+	border: 1px solid #DCDCDC;
+	border-radius: 3px;
+}
+
+td {
+	background-color: #F7F7F7;
+	border: 1px solid #DCDCDC;
+	padding: 0.5rem;
+}
+
+th {
+	background-color: #D24940;
+	color: #fff;
+	padding: 1rem;
+	border: 1px solid #DCDCDC;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+li {
+	list-style: none;
+}
+
+h2 {
+	font-family: 'Pacifico', sans-serif;
+	clear: both;
+	font-size: 4rem;
+	color: #404040;
+}
+
+.home-title,
+.countries-title {
+	font-size: 3rem;
+	margin: 1rem;
+	color: #404040;
+}
+
+label {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+span {
+	font-size: 1.5rem;
+}
+
+.neighbors {
+	margin-bottom: 5rem;
+	padding: 1rem;
+}
+
+.neighbor-names {
+	padding: 0.5rem;
+	color: #D24940;
+	margin: 0.5rem;
+}
+
+.neighbor-names:hover {
+	color: #D24940;
+	opacity: 0.9;
+}
+
+.country-flag {
+	width: 200px;
+	margin: 1rem;
+}
+
+.country-image {
+	width: 150px;
 	margin: 2rem;
+}
+
+.country-name:hover {
+	color: #D24940;
+	opacity: 0.9;
 }
 

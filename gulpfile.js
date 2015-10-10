@@ -21,14 +21,14 @@ gulp.task('minify-html', function() {
   };
   return gulp.src('!./app/*.html')
     .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('minify-css', function() {
   var opts = {comments: true, spare: true};
   gulp.src(['./app/**/*.css', '!./app/bower_components/**'])
     .pipe(minifyCSS(opts))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('minify-js', function() {
@@ -37,17 +37,17 @@ gulp.task('minify-js', function() {
       // inSourceMap:
       // outSourceMap: "app.js.map"
     }))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('copy-bower-components', function() {
   gulp.src('./app/bower_components/**')
-    .pipe(gulp.dest('dist/bower_components'));
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('copy-html-files', function() {
   gulp.src('./app/**/*.html')
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('connect', function () {
@@ -59,7 +59,7 @@ gulp.task('connect', function () {
 
 gulp.task('connectDist', function () {
   connect.server({
-    root: 'dist/',
+    root: 'build/',
     port: 9999
   });
 });

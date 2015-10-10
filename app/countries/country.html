@@ -1,28 +1,33 @@
 <div class="country-content">
-	<h1 class="country-title">{{country.countryName}}</h1>
-	<ul class="labels">
-		<li>Population of Country:</li>
-		<li>Area:</li>
-		<li>Capital:</li>
-		<li>Population of Capital:</li>
-		<li>Neighbors:</li>
-		<li>{{State}}</li>
-	</ul>
-	<ul class="stats">
-		<li>{{country.population | number}}</li>
-		<li>{{country.areaInSqKm | number}}</li>
-		<li>{{country.capital}}</li>
-		<li>{{capitals[0].population | number}}</li>
-		<li>
-			<a ng-href="#/countries/{{neighbors[0].countryCode}}/{{neighbors[0].name}}">{{neighbors[0].name}}</a>
-   			<a ng-href="#/countries/{{neighbors[1].countryCode}}/{{neighbors[1].name}}">{{neighbors[1].name}}</a>
-    		<a ng-href="#/countries/{{neighbors[2].countryCode}}/{{neighbors[2].name}}">{{neighbors[2].name}}</a>
-    	</li>
-	</ul>
 	<div class="countryImgFlag">
-		<img class="country-image" src="http://www.geonames.org/img/country/250/{{country.countryCode}}.png">
 		<img class="country-flag" width="250px" src="http://www.geonames.org/flags/x/{{country.countryCode | lowercase}}.gif">
 	</div>
-	<a class="button" href="/#/">Home</a>
+	<h2>{{country.countryName}}</h2>
+	<div>
+		<label>Population of Country:</label>
+		<span> {{country.population | number: 0}}</span>
+	</div>
+	<div>
+		<label>Area:</label>
+		<span> {{country.areaInSqKm | number: 0}} sq km</span>
+	</div>
+	<div>
+		<label>Capital:</label>
+		<span> {{country.capital}}</span>
+	</div>
+	<div>
+		<label>Population of Capital:</label>
+		<span> {{((capital.population | number: 0) || 'Loading population data' )}}</span>
+	</div>
+	<div class="neighbors" >
+		<div class="neighbor">
+			<label>{{neighbors.length}} Neighbors:</label>
+			<span ng-repeat="neighbor in neighbors">
+				<a href="#/countries/{{neighbor.countryCode}}" class="neighbor-names">{{neighbor.countryName}}</a>
+			</span>
+		</div>
+		<img class="country-image" src="http://www.geonames.org/img/country/250/{{country.countryCode}}.png">
+	</div>
+	<a class="button" href="#/">Home</a>
 	<a class="button" href="#/countries">Browse Countries</a>
 </div>
