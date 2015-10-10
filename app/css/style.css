@@ -68,12 +68,16 @@ textarea:focus, input:focus, button:focus {
 .content {
 	background-color: #fff;
 	padding: 1rem;
-	margin: 1rem 20%;
+	margin: 1rem 10%;
 	border-radius: 3px;
 }
 
 .countries-content,
 .home-content {
+	margin: 1rem 1rem;
+}
+
+.country-content {
 	margin: 1rem;
 }
 
