@@ -77,6 +77,10 @@ textarea:focus, input:focus, button:focus {
 	margin: 1rem 1rem;
 }
 
+.countries-content {
+  overflow-x: scroll;
+}
+
 .country-content {
 	margin: 1rem;
 }
