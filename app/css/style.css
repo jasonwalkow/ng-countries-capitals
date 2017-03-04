@@ -9,6 +9,10 @@ body {
 	background-color: #D24940;
 }
 
+.ng-scope {
+  padding-bottom: 15px;
+}
+
 a {
 	cursor: pointer;
 	color: #D24940;
